@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2989f66b-8eee-46d1-a685-a30aff3a889c" name="localhost" url="http://localhost/mercauto">
+        <fileTransfer host="http://localhost" port="80" rootFolder="/mercauto">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="80" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="871783c8-081a-4297-afa3-0d0de7e0f2e7" name="Apache on XAMPP" url="http://localhost/cozagro">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
