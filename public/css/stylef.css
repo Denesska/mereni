@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+}
+.item{
+    display: block;
+    margin: 20px auto 10px;
+    min-width: 250px;
+    max-width: 300px;
+    
+}
+.inline{
+    display: inline;
+}

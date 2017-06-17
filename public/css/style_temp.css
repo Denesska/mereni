@@ -1,0 +1,27 @@
+@import "compass/css3";
+
+.tbl-accordion{
+  margin: 0 auto;
+  width: 900px;
+  border: 1px solid #d9d9d9;
+  thead{
+    background: #d9d9d9;
+  }
+  // Inner table
+  .tbl-accordion-nested{
+    width: 100%;
+    tr:nth-child(even){
+      background-color: #eeeeee;
+    }
+    td, th{
+      padding: 10px;
+      border-bottom: 1px solid #d9d9d9;
+    }
+    .tbl-accordion-section{
+      background:#333;
+      color: #fff;
+      cursor: pointer;
+    }
+  }  
+}
+
