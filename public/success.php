@@ -18,7 +18,7 @@ $page = "success";
 <header class="bgimage">
     <div class="container">
         <div class="col-xs-5 col-xs-offset-1">
-            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="../image/logo.jpg" alt="logo"></a>
+            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="/image/logo.jpg" alt="logo"></a>
         </div>
         <div class="col-xs-6">
             <div class="logo-sm" >
@@ -53,8 +53,8 @@ $page = "success";
         <p>Copyright &copy; <?= date("Y")?> toate drepturile sunt rezervate de Denis Gandzii pentru socri.</p>
     </div>
 </footer>
-<script src="../public/js/jquery-3.1.1.min.js"></script>
-<script src="../public/js/bootstrap.min.js"></script>
-<script src="../public/js/script.js"></script>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

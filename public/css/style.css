@@ -2,7 +2,7 @@ body{
    /* min-width: 660px; */
 }
 .bgimage{
-    background-image: url('../../image/header-tomato.jpg');
+    background-image: url('/image/header-tomato.jpg');
     background-position: center center;
     background-size: cover;
     height: 10em;

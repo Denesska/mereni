@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/bootstrap3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="/css/bootstrap3.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title><?= $title ?></title>
 </head>
 <?php
@@ -18,7 +18,7 @@ require_once "../includes/function.php";
     <div class="container">
         <!-- Logo organizatie -->
         <div class="col-xs-5 col-xs-offset-1">
-            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="../image/logo.jpg"
+            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="/image/logo.jpg"
                                      alt="logo"></a>
         </div>
         <!-- Afiseaza ora -->

@@ -28,7 +28,7 @@ require_once "../includes/add_user.php";
 <header class="bgimage">
     <div class="container">
         <div class="col-xs-5 col-xs-offset-1">
-            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="../image/logo.jpg"
+            <a href="index.php"><img class="logo-sm img-responsive img-thumbnail" src="/image/logo.jpg"
                                      alt="logo"></a>
         </div>
         <div class="col-xs-6">

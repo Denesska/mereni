@@ -3,7 +3,7 @@ require "../includes/for_ajax.php";
 require_once  "function.php";
 // verifica daca este setata data
 if (!isset($_POST['date'])){
-    header("Location: ../public/rulaj_zi_nou");
+    header("Location: /rulaj_zi_nou");
     exit();
 }else{
     if (!isset($date)) {

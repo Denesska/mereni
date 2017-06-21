@@ -25,7 +25,7 @@ if(isset($_POST['remove_id'])) {
 
     // redirectioneaza pagina
     echo "acum trebuie sa redirectioneze";
-    header("location: ../public/lucru_zi.php");
+    header("location: /lucru_zi.php");
     exit();
 } else{
     echo "nu este setat get";

@@ -10,7 +10,7 @@ require "../includes/layout/nav_bar.php";
                <div class="content col-xs-12 col-md-10 col-lg-8 col-xs-offset-0 col-md-offset-1 col-lg-offset-2">
             <!-- Raport personal-->
             <div class="col-xs-2 col-sm-3 col-lg-2 ">
-                <a href="lucru_zi.php"><img class="logo-sm" src="../image/work.png" alt="logo"></a>
+                <a href="lucru_zi.php"><img class="logo-sm" src="/image/work.png" alt="logo"></a>
             </div>
             <div class="col-sm-8 col-lg-9">
                 <div class="">
@@ -26,7 +26,7 @@ require "../includes/layout/nav_bar.php";
             <hr>
             <!-- Calendar-->
             <div class="col-xs-2 col-sm-3 col-lg-2 ">
-                <a href="calendar.php"><img class="logo-sm" src="../image/calendar.png" alt="logo"></a>
+                <a href="calendar.php"><img class="logo-sm" src="/image/calendar.png" alt="logo"></a>
             </div>
             <div class="col-sm-8 col-lg-9">
                 <div class="">
@@ -40,7 +40,7 @@ require "../includes/layout/nav_bar.php";
             <hr>
             <!-- Adauga angajat-->
             <div class="col-xs-2 col-sm-3 col-lg-2 ">
-                <a href="angajati.php"><img class="logo-sm" src="../image/personal.png" alt="logo"></a>
+                <a href="angajati.php"><img class="logo-sm" src="/image/personal.png" alt="logo"></a>
             </div>
             <div class="col-sm-8 col-lg-9">
                 <div class="">
