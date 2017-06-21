@@ -33,22 +33,17 @@ if (isset($_POST["submit"])) {
         }
     }
 
-    if ((isset($tel['mob']) || !empty($tel['mob'])) && (isset($tel['fix']) || !empty($tel['fix']))) {
-        foreach ($tel as $type => $nr) {
-            $number = extract_num($nr);
-            $lenght = check_lenght($number);
-            $tel[$type] = phone_format($number);
-
-            if (!$lenght) {
-                $status["tel_" . $type] = "has-warning";
-                $errors++;
-                $_SESSION['message'] = "Antemtie! Numarul de telefon nu este completat corect\"";
-                $_SESSION['status'] = "warning";
-                $_SESSION['icon'] = "glyphicon-phone-alt";
-            } else {
-                $status["tel_" . $type] = "has-success";
-            }
-        }
+    if ((isset($tel['mob']) && !empty($tel['mob']))) {
+        $tel_form = validate_phone_num($tel['mob']);
+        $status['tel_mob'] = $tel_form['sta'];
+        $tel['mob'] = $tel_form['tel'];
+        $errors +=$tel_form['err'];
+    }
+    if ((isset($tel['fix']) && !empty($tel['fix']))) {
+        $tel_form = validate_phone_num($tel['fix']);
+        $status['tel_fix'] = $tel_form['sta'];
+        $tel['fix'] = $tel_form['tel'];
+        $errors += $tel_form['err'];
     }
     if (!$errors && !$missing) {
         $date = date('Y-m-d');

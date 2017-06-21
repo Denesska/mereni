@@ -62,4 +62,5 @@ require_once "../includes/add_sallary.php";
             </div>
         </form>
     </main>
-<?php require_once "../includes/layout/bottom_page.php" ?>
+<?php echo "trebuie sa incarca bottom";require "../includes/layout/bottom_page.php" ?>
+

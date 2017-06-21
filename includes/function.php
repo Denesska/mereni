@@ -285,7 +285,7 @@ function login($user, $pass)
             $_SESSION['status'] = "success";
             $_SESSION['message'] = "Bine ai veni din nou in Program";
             $_SESSION['icon'] = "glyphicon-check";
-            header('Location: http://localhost/cozagro/public/index.php');
+            header('Location: index.php');
             exit();
         } else {
             $_SESSION['status'] = "danger";

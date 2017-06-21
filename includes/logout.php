@@ -14,5 +14,5 @@ $_SESSION['icon'] = "glyphicon-off";
 if (isset($_COOKIE[session_name()])){
     setcookie(session_name(), '', time()-42000, '/');
 }
-header("Location: http://localhost/cozagro/public/login.php");
+header("Location: http://localhost/mereni/public/login.php");
 exit();

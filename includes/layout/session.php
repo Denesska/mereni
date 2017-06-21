@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: http://localhost/cozagro/public/login.php");
+    header("Location: login.php");
     exit();
 }
 if ($_SESSION['expire'] < time()) {
@@ -10,7 +10,7 @@ if ($_SESSION['expire'] < time()) {
                             <br> - Au trecut mai mult de 30 min de la ultima vizita, trebuie sa va logati din nou:";
     $_SESSION['icon'] = "glyphicon-exclamtion-sign";
     $_SESSION['status'] = "warning";
-    header("Location: http://localhost/cozagro/public/login.php");
+    header("Location: login.php");
     exit();
     //   $_SESSION['message'] =  $now." si expira ".$nows;
     //      print_r($_SESSION);
