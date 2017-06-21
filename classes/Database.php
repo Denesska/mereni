@@ -12,8 +12,8 @@ class Database
     private $_connection;
     private static $_instance; //The single instance
     private $_host = "localhost";
-    private $_username = "root";
-    private $_password = "231Haulina";
+    private $_username = "denis";
+    private $_password = "nm0FE7cXqFOz5YYi$.";
     private $_database = "cozagro_db";
     /*
     Get an instance of the Database
