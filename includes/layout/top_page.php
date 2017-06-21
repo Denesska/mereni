@@ -34,9 +34,10 @@ require_once "../includes/function.php";
                     <p id="date"></p>
                 </div>
             </div>
-        </div>
+        </div><?php if(isset($_SESSION['user'])){?>
             <p style="float: right; margin-top: 100px; color: white;">Buna <?= $_SESSION['user']; ?>&nbsp;&nbsp;
                 <br> <a class="white" href="/logout.php"> Delogare</a></p>
+        <?php } ?>
     </div>
 </header>
 <hr/>
