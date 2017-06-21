@@ -36,7 +36,7 @@ require_once "../includes/function.php";
             </div>
         </div>
             <p style="float: right; margin-top: 100px; color: white;">Buna <?= $_SESSION['user']; ?>&nbsp;&nbsp;
-                <br> <a class="white" href="../includes/logout.php"> Delogare</a></p>
+                <br> <a class="white" href="/logout.php"> Delogare</a></p>
     </div>
 </header>
 <hr/>
