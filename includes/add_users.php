@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
         session_start();
         $_SESSION['user'] = ucfirst($user);
         $_SESSION['time'] = time();
-        header('Location: http://localhost/cozagro/public/index.php');
+        header('Location: /index.php');
         exit();
     }else{
         $status_text = "Numele de utilizator sau parola sunt incorecte";

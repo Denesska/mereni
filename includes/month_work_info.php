@@ -42,7 +42,7 @@ if ($tab == 1){
     $info = array('z','platit','comment');
 
 }else{
-    header("Location: http://localhost/cozagro/public/angajati.php");
+    header("Location: /angajati.php");
     exit();
 }
 $result = Database::getInstance()->getConnection()->query($query);

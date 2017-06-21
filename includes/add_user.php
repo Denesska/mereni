@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
                 <p id="status_baloon" class="bg-danger alert h3 container"><?= $status_text ?></p> <?php
                 die();
             }
-            header("Location: http://localhost/cozagro/public/success.php");
+            header("Location: /success.php");
             exit();
         }
         $alert["status"] = "danger";

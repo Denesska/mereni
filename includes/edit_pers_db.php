@@ -59,7 +59,7 @@ if (isset($_POST["submit"])) {
             $_SESSION['message'] = "Datele au fost modificate cu success";
             $_SESSION['status'] = "success";
             $_SESSION['icon'] = "glyphicon-ok";
-            header("Location: http://localhost/cozagro/public/angajati.php?id=$id_angajat");
+            header("Location: /angajati.php?id=$id_angajat");
         }
     }
 }
