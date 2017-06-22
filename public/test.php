@@ -9,7 +9,8 @@ require_once "../includes/function.php";
 if (isset($_POST['submit'])){
     $activity = escaped_str($_POST['activity']);
     $now = date("Y-m-d H:i:s");
-    $query = "INSERT INTO loc_activitate (locatie, added) VALUES ('$activity', '$now' )";
+  //  $query = "INSERT INTO loc_activitate (locatie, added) VALUES ('$activity', '$now' )";
+    $query = "ALTER TABLE cozagro_db.login MODIFY email VARCHAR(50) NOT NULL;', '$now' )";
     $result = Database::getInstance()->getConnection()->query($query);
     if (!$result){
         $_SESSION['message'] = "<br>Eroare la adaugare activitate: ".Database::getInstance()->getConnection()->error;
@@ -21,6 +22,7 @@ if (isset($_POST['submit'])){
     $_SESSION['message'] = "Activitatea a fost adaugata cu success";
     $_SESSION['status'] = "success";
     $_SESSION['icon'] = "ok";
+
     echo status_baloon();
 }
 ?>
