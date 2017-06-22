@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: denes
- * Date: 28-May-17
- * Time: 7:14 PM
- */
 class Database
 {
 
@@ -32,7 +26,7 @@ class Database
 
         // Error handling
         if(mysqli_connect_error()) {
-            trigger_error("Failed to conencto to MySQL: " . mysqli_connect_error(),
+            trigger_error("Failed to connect to to MySQL: " . mysqli_connect_error(),
                 E_USER_ERROR);
         }
     }

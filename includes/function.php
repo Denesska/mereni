@@ -132,6 +132,67 @@ function selected($id, $row_num, $field, $backup_array)
 // Functii DB !!!
 
 
+// Extrage numele la toate tabelele din toata DB
+function get_tables_name(){
+    $tables = null;
+    $query = "SHOW TABLES FROM cozagro_db";
+    $result = Database::getInstance()->getConnection()->query($query);
+    if (!$result){
+        $_SESSION['message'] = "<br>Eroare la get_tables_name".Database::getInstance()->getConnection()->error;
+        $_SESSION['status'] = "danger";
+        $_SESSION['icon'] = "exclamation-sign";
+        echo status_baloon();
+        die("mort!!");
+    }
+    while ($row = $result->fetch_row()){
+        $table = ucfirst(str_replace("_", " ", $row[0]));
+        $tables[] = ['name' => $table, 'tab' => $row[0]];
+    }
+    $result ->free_result();
+    return $tables;
+}
+// Extrage numele coloanelor dintr-un tabel
+
+function get_columns_name($table) {
+    $columns_name=null;
+    $query = "SHOW COLUMNS FROM $table";
+    $result = Database::getInstance()->getConnection()->query($query);
+    if (!$result){
+        $_SESSION['message'] = "<br>Eroare la get_columns_name".Database::getInstance()->getConnection()->error;
+        $_SESSION['status'] = "danger";
+        $_SESSION['icon'] = "exclamation-sign";
+        echo status_baloon();
+        die("mort!!");
+    }
+    while ($row = $result->fetch_row()){
+        $columns_name[] =$row[0];
+    }
+    $result->free_result();
+    return $columns_name;
+}
+
+// Selecteaza toata informatia din coloane
+function select_columns($table,$columns_name){
+    $columns = null;
+    $i=0;
+    $query = "SELECT * FROM $table";
+    $result = Database::getInstance()->getConnection()->query($query);
+    if (!$result){
+        $_SESSION['message'] = "Eroare la select_columns".Database::getInstance()->getConnection()->error;
+        $_SESSION['status'] = "danger";
+        $_SESSION['icon'] = "exclamation-sign";
+        echo status_baloon();
+        die("mort!!");
+    }
+    while ($row = $result->fetch_assoc()){
+        $i++;
+        foreach ($columns_name as $column)
+            $columns[$i][$column] = $row[$column];
+    }
+    $result->free_result();
+    return $columns;
+}
+
 // Selecteaza numele la toti angajatii din DB
 function select_all_employee()
 {
@@ -318,6 +379,7 @@ function work_data_emp($id)
     $result->free_result();
     return $zile_lucrate;
 }
+
 // Selcteaza suma creantelor grupate pe luni.
 function sum_salarii_moth_group_emp($id)
 {
@@ -335,6 +397,7 @@ function sum_salarii_moth_group_emp($id)
     $result->free_result();
     return $creante_luna;
 }
+
 // Selcteaza suma creantelor grupate pe luni.
 function sum_creante_moth_group_emp($id)
 {

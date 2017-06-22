@@ -111,6 +111,7 @@ require_once "../includes/layout/nav_bar.php";
                                                     FROM cozagro_db.work_days 
                                                     WHERE DATE_SUB(CURDATE(),INTERVAL 6 DAY) <= submission_date  AND deleted = 0
                                                     ORDER BY submission_date DESC ";
+                                    echo "<h1>$query_data</h1>";
                                     $result_data = Database::getInstance()->getConnection()->query($query_data);
                                     if (!$result_data) {
                                         die("Nu s-a reusit conexiunea la DB selectarea zilelor de munca" . Database::getInstance()->getConnection()->error);
