@@ -10,7 +10,7 @@ if (isset($_POST['submit'])){
     $activity = escaped_str($_POST['activity']);
     $now = date("Y-m-d H:i:s");
   //  $query = "INSERT INTO loc_activitate (locatie, added) VALUES ('$activity', '$now' )";
-    $query = "ALTER TABLE cozagro_db.login MODIFY email VARCHAR(50) NOT NULL;', '$now' )";
+    $query = "ALTER TABLE cozagro_db.login MODIFY email VARCHAR(50) NOT NULL";
     $result = Database::getInstance()->getConnection()->query($query);
     if (!$result){
         $_SESSION['message'] = "<br>Eroare la adaugare activitate: ".Database::getInstance()->getConnection()->error;
